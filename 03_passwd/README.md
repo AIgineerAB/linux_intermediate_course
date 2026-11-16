@@ -32,5 +32,37 @@ anna:x:1001:1001:Anna Svensson,,,:/home/anna:/bin/bash
 6. Home directory 
 7. Login shell - path to when 
 
+### All users that can login
+
+Run this to find all users that can login
+
+```bash
+grep -Ev '(nologin|false)$' /etc/passwd 
+
+root:x:0:0:Super User:/root:/bin/bash
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+kokchun:x:1000:1000:kokchun:/home/kokchun:/bin/bash
+```
+
+**root** is the superuser
+- UID 0 -> superuser
+- GID 0 -> root group
+- home is /root
+- shell is /bin/bash , which we can log in
+
+**sync, shutdown, halt**
+- shell is a command -> logging in runs the command
+
+**kokchun**
+- real user
+- UID 1000 -> first regular user
+- GIP 1000 -> personal group
+- home is /home/kokchun
+- shell is /bin/bash
+
+
+
 
 ## User management and passwd
