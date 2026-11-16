@@ -45,6 +45,8 @@ Another way to read in a file is to use awk directly
 
 ```bash
 awk -F, '{print $1,$2,$3}' pokemons.csv
+```
+
 
 ### Filter
 
