@@ -1,7 +1,7 @@
 # awk
 
-<a href="" target="_blank">
-  <img src="https://github.com/kokchun/assets/blob/main/FOLDER_NAME/.png?raw=true" alt="DESCRIPTION" width="600">
+<a href="https://youtu.be/8Ib3SXMlMc0" target="_blank">
+  <img src="https://github.com/kokchun/assets/blob/main/linux/awk.png?raw=true" alt="DESCRIPTION" width="600">
 </a>
 
 awk is a scripting language for data extraction, filtering and reporting, which exists by default in Unix like operating systems.
