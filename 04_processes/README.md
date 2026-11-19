@@ -10,11 +10,29 @@ A program is a passive file that can be executed by Linux kernel. When the progr
 
 When you run a command, linux is dynamically creating a process and gives it a PID, which is used for tracking and managing processes. 
 
+## To track processes
+
+```bash
+# process status -> list all processes
+ps
+
+# full info
+ps -f 
+
+# full and extended info
+ps -ef 
+
+# info about users
+ps -a 
+```
+
 ## Foreground process
 
 Processes starts in foreground by default taking keyboard input, and blocks the terminal and sends output to screen.
 
 During time of execution you can't run anything until it's finished.
+
+Stop the foreground process with `ctrl+c`
 
 ## Background process
 
@@ -27,6 +45,15 @@ sleep 5
 # outputs, where [1] is the job number and 73541 is the PID
 [1] 73541
 ```
+
+Background processes are stopped with `kill PID`. If kill doesn't work use kill -9 to force kill it.
+
+<!-- bg and fg 
+what happens when opening new terminal?
+does a fg become a bg in another terminal?
+ps -> shows only fg? 
+bg %PID -> how can this send to bg if occupied terminal when it runs?
+-->
 
 ## Read more
 
