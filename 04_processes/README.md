@@ -12,7 +12,21 @@ When you run a command, linux is dynamically creating a process and gives it a P
 
 ## Foreground process
 
+Processes starts in foreground by default taking keyboard input, and blocks the terminal and sends output to screen.
+
+During time of execution you can't run anything until it's finished.
+
 ## Background process
+
+Adding an ampersand `&` after the command will send it to the background. Sending it to the background means you can do other things in the terminal. 
+
+Example 
+```bash
+sleep 5 
+
+# outputs, where [1] is the job number and 73541 is the PID
+[1] 73541
+```
 
 ## Read more
 
