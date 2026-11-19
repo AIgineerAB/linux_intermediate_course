@@ -46,6 +46,7 @@ halt:x:7:0:halt:/sbin:/sbin/halt
 kokchun:x:1000:1000:kokchun:/home/kokchun:/bin/bash
 ```
 
+
 **root** is the superuser
 - UID 0 -> superuser
 - GID 0 -> root group

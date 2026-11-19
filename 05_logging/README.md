@@ -124,6 +124,36 @@ journalctl -n 50
 journalctl --no-pager | grep -i error
 ```
 
+**filter by service/unit**
+
+```bash
+# sshd service
+journalctl -u sshd
+
+# sshd and chronyd
+journalctl -u sshd -u chronyd
+
+# user service
+journalctl --user -b -u service_name
+
+# gnome display manager since today
+journalctl -u gdm --since today
+```
+
+**filter by time**
+
+```bash
+journalctl --since "10 minute ago"
+journalctl --since "1 hour ago"
+journalctl --since yesterday
+journalctl --since today
+```
+
+**filter by **
+
+```bash
+```
+
 ## Read more 👓
 
 - [what is /var/log: understanding linux system logs - last9 ](https://last9.io/blog/what-is-var-log/)
