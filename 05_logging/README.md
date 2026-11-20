@@ -149,10 +149,6 @@ journalctl --since yesterday
 journalctl --since today
 ```
 
-**filter by **
-
-```bash
-```
 
 ## Read more 👓
 
