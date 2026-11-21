@@ -1,7 +1,7 @@
 # Logs in linux
 
-<a href="" target="_blank">
-  <img src="https://github.com/kokchun/assets/blob/main/FOLDER_NAME/.png?raw=true" alt="DESCRIPTION" width="600">
+<a href="https://youtu.be/MgBWDQ3352k" target="_blank">
+  <img src="https://github.com/kokchun/assets/blob/main/linux/logging.png?raw=true" alt="logging" width="600">
 </a>
 
 ## What are logs?
