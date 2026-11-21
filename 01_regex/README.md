@@ -4,6 +4,13 @@
   <img src="https://github.com/kokchun/assets/blob/main/linux/regex.png?raw=true" alt="DESCRIPTION" width="600">
 </a>
 
+> [!NOTE]
+> if you don't have color coding on your shell for grep, then add this line to .bashrc 
+>
+> `grep='grep --color=auto'`
+
+
+
 ## Use cases
 
 - data validation - check input matches specific format
