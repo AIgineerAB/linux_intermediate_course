@@ -1,25 +1,31 @@
 # Linux intermediate course
 
-In this course, you'll dive into:
+We'll firstly dive into more tools for working with bash and processing of data and logs. In linux everything is a file and therefore extracting data from files are important to understand the system. Tools for this that we cover are:
 
-- regexp pattern matching
-- awk programming language for quick data processing
-- more about linux file hierarchy system
-- how logging works in linux
+- grep -E to perform regex pattern matching
+- awk programming language for extracting data
+
+After getting these tools we'll strengthen our fundamentals by checking
+
 - user management and /etc/passwd
--
+- logging
+- daemons
+- networking
+- firewall
 
-For this you will be using the following tools:
+Afterwards we'll go into
 
-- virtualbox
-- oracle linux
-- ansible
+- NFS
+- hardening
+- ansible - iac
 
 Prerequisites for this course are:
+
+- fundamental linux and the shell
 
 | **Week** | **Content**                          | **Lectures** | **Exercise** |
 | -------- | ------------------------------------ | ------------ | ------------ |
 | 1        | intro, regex, awk, passwd, processes | 00-04        | 0            |
-| 2        | logging                              |              | 1            |
-| 3        |                                      |              |              |
-| 4        |                                      |              |              |
+| 2        | logging, daemons, networking         | 05-07        | 1            |
+| 3        | firewall, NFS, IaC, lab intro        | 08-10        | lab          |
+| 4        | IaC continue, work with lab          | 11           | lab          |
