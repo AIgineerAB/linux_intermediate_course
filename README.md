@@ -23,9 +23,9 @@ Prerequisites for this course are:
 
 - fundamental linux and the shell
 
-| **Week** | **Content**                          | **Lectures** | **Exercise** |
-| -------- | ------------------------------------ | ------------ | ------------ |
-| 1        | intro, regex, awk, passwd, processes | 00-04        | 0            |
-| 2        | logging, daemons, networking         | 05-07        | 1            |
-| 3        | firewall, NFS, IaC, lab intro        | 08-10        | lab          |
-| 4        | IaC continue, work with lab          | 11           | lab          |
+| **Week** | **Content**                             | **Lectures** | **Exercise** |
+| -------- | --------------------------------------- | ------------ | ------------ |
+| 1        | intro, regex, awk, passwd               | 00-03        | 0            |
+| 2        | processes, logging, daemons, networking | 04-07        | 1            |
+| 3        | firewall, NFS, IaC, lab intro           | 08-10        | lab          |
+| 4        | IaC continue, work with lab             | 11           | lab          |
