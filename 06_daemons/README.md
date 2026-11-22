@@ -94,14 +94,14 @@ systemctl is-enabled rsyslog
 Systemd manages many different unit types and .service is the one that are daemons. Here is a way to find out a frequency count for various units
 
 ```bash
-# split . with awk and picks the last element, then pipe it to sort so that we can do uniq -c  for freq count
+# split . with awk and picks the last element,
 systemctl list-units --no-legend --no-pager --plain | awk '{n=split($1,a,"."); print a[n]}' | sort | uniq -c
 ```
 
-Here is an example output
+Example of output from this
 
 ```bash
-     1 automount
+      1 automount
      13 device
      12 mount
       3 path
@@ -112,6 +112,24 @@ Here is an example output
       1 swap
      23 target
       7 timer
+```
+
+Here is a way to filter out one type of units
+
+```bash
+systemctl list-units --no-pager | awk '$1~/\.timer/ {u=$1;$1=$2=$3=$4=""; print u, "?", $0}' | column -t -s?
+```
+
+With this output
+
+```
+dnf-makecache.timer                 dnf makecache --timer
+fstrim.timer                        Discard unused filesystem blocks once a week
+fwupd-refresh.timer                 Refresh fwupd metadata regularly
+logrotate.timer                     Daily rotation of log files
+plocate-updatedb.timer              Update the plocate database daily
+raid-check.timer                    Weekly RAID setup health check
+systemd-tmpfiles-clean.timer        Daily Cleanup of Temporary Directories
 ```
 
 ## Other videos 📹
