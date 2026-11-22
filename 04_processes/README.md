@@ -22,8 +22,13 @@ ps -f
 # full and extended info
 ps -ef 
 
-# info about users
+# processes for all users
 ps -a 
+
+# aux - all processes, exteneded info in user firendly format and includes daemons
+ps -aux
+
+
 ```
 
 ## Foreground process
