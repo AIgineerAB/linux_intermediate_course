@@ -19,7 +19,68 @@ Let's start with checking out /etc/vimrc to see the system-wide configurations f
 
 <!-- grep -En '^ *"' vimrc  -->
 
-## 1. Parse /etc/shadow
+## 1. Search protocols and services
+
+&nbsp; a) Search for all protocols with internet in its comments inside of /etc/protocols
+
+<!-- cat protocols | grep -i internet -->
+
+&nbsp; b) Search for rows with ssh
+
+&nbsp; c) Search for rows starting with ssh
+
+&nbsp; d) Find a service on the port 443
+
+&nbsp; e) Find a service on the port 80
+
+&nbsp; f) Find all services starting with web
+
+## 2. Parse /etc/group
+
+The structure of each line in /etc/group is
+
+```bash
+# structure
+groupname:password:GID:members
+
+# example
+sudo:x:27:bob,david
+```
+
+&nbsp; a) Print out all groups with GID at least 1000 and the header
+
+example output
+
+```text
+GROUPNAME  PASSWD  GID
+nobody     x       65534
+kokchun    x       1000
+David      x       1001
+bib        x       1002
+Camille    x       1003
+```
+
+<!-- awk -F: 'BEGIN{print "GROUPNAME,PASSWD,GID"  } $3>=1000 {print $1"," $2","$3}' group | column -t -s, -->
+
+&nbsp; b) Print out all groups with GID from 0 to 9 and the header
+
+```text
+GROUPNAME  PASSWD  GID
+root       x       0
+bin        x       1
+daemon     x       2
+sys        x       3
+adm        x       4
+tty        x       5
+disk       x       6
+lp         x       7
+mem        x       8
+kmem       x       9
+```
+
+&nbsp; c) Count number of rows with that has a password.
+
+## 3. Parse /etc/shadow
 
 Password hashes are stored in /etc/shadow and you neet root access to be able to read this file.
 
@@ -52,9 +113,7 @@ bib      $y$j9T$pbfrLv19BApMmIwSawtCM1$j1ZCmHhLsmSkB0FXXMefQhk/f1v1OO1zfxJlEuJXm
 
 <!-- sudo awk -F: '$2=="!" || $2=="*" {print $1, $2}' shadow -->
 
-## 2. TBD
-
-## 3. Theory questions
+## 4. Theory questions
 
 &nbsp; a) What is the purpose of using regular expression with grep?
 
@@ -78,6 +137,7 @@ Fill in this table either by copying this into your own markdown file or copy it
 | --------------------- | ----------- |
 | awk                   |             |
 | gawk                  |             |
+| pattern { action}     |             |
 | regex                 |             |
 | grep -E               |             |
 | /etc                  |             |
@@ -88,4 +148,5 @@ Fill in this table either by copying this into your own markdown file or copy it
 | regex character class |             |
 | regex grouping        |             |
 | regex alternation     |             |
+| protocol              |             |
 |                       |             |
