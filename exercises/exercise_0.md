@@ -1,8 +1,8 @@
 # Exercise 0 - Tools for data processing
 
-In this exercise, you get to familiarize yourself with regular expressions and awk so that you can process various files in Linux. We'll focus on `/etc` directory which stores system-wide configurations files.
+In this exercise, you get to familiarize yourself with regular expressions and awk so that you can process various files in Linux. We'll focus on `/etc` directory which stores system-wide configurations files. These files control the behavior of operating system, services and installed softwares.
 
-These files control the behavior of operating system, services and installed softwares.
+Purpose of this exercise is both to learn the neccessary tools to search and process text files and also to learn about various files in Linux.
 
 ## 0. /etc/vimrc 
 
