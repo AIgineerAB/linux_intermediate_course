@@ -70,6 +70,10 @@ grep -Ev '(nologin|false)$' /etc/passwd
 
 # finds all users with /home. [^:]* means match any character not colon and * matches 0 or more of that character class
 grep -E ':/home[^:]*' /etc/passwd
+
+# to get the only matching and not the whole line use -o flag 
+grep -Eo '/home/[^:]*' passwd
+
 ```
 
 ## Regex table for reference
