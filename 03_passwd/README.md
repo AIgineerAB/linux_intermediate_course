@@ -73,6 +73,30 @@ kokchun:x:1000:1000:kokchun:/home/kokchun:/bin/bash
 
 ## /etc/shadow 
 
+Hashed password lived originally inside of /etc/passwd, but /etc/passwd is world-reachable as many programs need to map UIDs to usernames such as `ls -l`. This is a security issue as you could take out the hashed password and brute force it. 
+
+The solution was to move it to /etc/shadow only readable by root and leave an x on the /etc/passwd to indicate there is a password to that user. 
+
+```bash
+grep David /etc/passwd
+# David:x:1000:1000:David:/home/David:/bin/bash
+#       ^ "look in shadow"
+```
+
+David inside of shadow
+
+```text
+David:$y$j9T$kww41m0uAeUfxTdaeyDHU0$wdPLRsYT4zbSXUPUtdIJZl209rUpm4I0zKCDW8D8pb.:20716:0:99999:7:::
+```
+
+The stored field is as follows `user: $ hash algorithm $ parameter $ salt $ hash`. So the login flow is as follows: 
+
+1. type password
+2. PAM (auth framework) calls pam_unix and checks the user in /etc/shadow
+3. reads the field $ y $ j9T $ salt $ hash and knows it is yescript with parameter j9T with certain salt and hash. 
+4. Uses this information in 3 and hashes what we typed then checks it against stored hash. Hashing is one-way so the actual password is not decrypted.
+
+
 
 
 ## User management and passwd

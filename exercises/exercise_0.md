@@ -4,7 +4,7 @@ In this exercise, you get to familiarize yourself with regular expressions and a
 
 Purpose of this exercise is both to learn the neccessary tools to search and process text files and also to learn about various files in Linux.
 
-## 0. search /etc/vimrc with grep -E
+## 0. Search /etc/vimrc with grep -E
 
 Let's start with checking out /etc/vimrc to see the system-wide configurations for vim. Note that this differs from the user specific ones in your home directory i.e. ~/.vimrc. 
 
@@ -19,7 +19,7 @@ Let's start with checking out /etc/vimrc to see the system-wide configurations f
 
 <!-- grep -En '^ *"' vimrc  -->
 
-## 1. 
+## 1. Parse /etc/shadow 
 
 DESCRIPTION
 
