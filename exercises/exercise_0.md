@@ -44,35 +44,48 @@ bib      $y$j9T$pbfrLv19BApMmIwSawtCM1$j1ZCmHhLsmSkB0FXXMefQhk/f1v1OO1zfxJlEuJXm
 
 <!--  sudo awk -F: 'BEGIN {print "USER,HASH"} $2~/^\$/ {print $1 "," $2}' shadow | column -t -s, -->
 
-&nbsp; c)
+&nbsp; c) Print out a table of all the users with ! as the second field. ! means the account is locked for password login.
 
-&nbsp; d)
+&nbsp; d) Now print out a table of all users with _ as the sencond field. _ means the account never had a password and isn't meant to. This is used for system/service accounts.
 
-&nbsp; e)
+&nbsp; e) Now print users with \* and ! in the same table.
 
-## 2. Theory questions
+<!-- sudo awk -F: '$2=="!" || $2=="*" {print $1, $2}' shadow -->
 
-DESCRIPTION
+## 2. TBD
 
-&nbsp; a)
+## 3. Theory questions
 
-&nbsp; b)
+&nbsp; a) What is the purpose of using regular expression with grep?
 
-&nbsp; c)
+&nbsp; b) What are some advantages of using awk compared to bash for processing data?
+
+&nbsp; c) Why is there no password information in /etc/passwd when it is called passwd?
+
+&nbsp; d) What happens to the /etc/passwd and /etc/shadow when you create a new user?
+
+&nbsp; e) What is the purpose of the /etc directory in Linux?
+
+&nbsp; f) The basic structure of awk is `pattern { action }` - what does this mean?
+
+&nbsp; g) How can you make awk behave as normal cat for a file?
 
 ## Glossary
 
 Fill in this table either by copying this into your own markdown file or copy it into a spreadsheet if you feel that is easier to work with.
 
-| terminology | explanation |
-| ----------- | ----------- |
-|             |             |
-|             |             |
-|             |             |
-|             |             |
-|             |             |
-|             |             |
-|             |             |
-|             |             |
-|             |             |
-|             |             |
+| terminology           | explanation |
+| --------------------- | ----------- |
+| awk                   |             |
+| gawk                  |             |
+| regex                 |             |
+| grep -E               |             |
+| /etc                  |             |
+| /etc/passwd           |             |
+| /etc/shadow           |             |
+| regex quantifier      |             |
+| regex anchor          |             |
+| regex character class |             |
+| regex grouping        |             |
+| regex alternation     |             |
+|                       |             |
