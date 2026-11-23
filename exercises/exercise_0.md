@@ -6,15 +6,19 @@ These files control the behavior of operating system, services and installed sof
 
 ## 0. /etc/vimrc 
 
-DESCRIPTION
+Let's start with checking out /etc/vimrc to see the system-wide configurations for vim. Note that this differs from the user specific ones in your home directory i.e. ~/.vimrc. 
 
-&nbsp; a)
+&nbsp; a) Search for all lines starting with set 
 
-&nbsp; b)
+&nbsp; b) Search for all lines starting with set and starting with leading spaces and then set (note that vim ignores leading whitespaces). 
 
-&nbsp; c)
+<!-- grep -En '^(set| +set)' vimrc -->
 
-&nbsp; d)
+&nbsp; c) Starting with a quote " is a comment in vimrc. Search for all comments starting with a quote
+
+<!-- grep -En '^"' vimrc  -->
+
+&nbsp; d) Also a quote after some commands (set, let, syntax, colorscheme) are treated as a trailing comment. Search for all comments after the set keyword.  
 
 &nbsp; e)
 
