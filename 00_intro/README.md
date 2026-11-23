@@ -1,13 +1,8 @@
 # Introduction to Linux intermediate course 
 
-<a href="" target="_blank">
-  <img src="https://github.com/kokchun/assets/blob/main/FOLDER_NAME/.png?raw=true" alt="DESCRIPTION" width="600">
+<a href="https://youtu.be/8Q3XnmDxnyw" target="_blank">
+  <img src="https://github.com/kokchun/assets/blob/main/linux/linux_II.png?raw=true" alt="linux part 2" width="600">
 </a>
 
 
 
-
-
-## Other videos 📹
-
-## Read more 👓
