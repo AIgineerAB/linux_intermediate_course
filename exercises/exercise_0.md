@@ -6,11 +6,11 @@ Purpose of this exercise is both to learn the neccessary tools to search and pro
 
 ## 0. Search /etc/vimrc with grep -E
 
-Let's start with checking out /etc/vimrc to see the system-wide configurations for vim. Note that this differs from the user specific ones in your home directory i.e. ~/.vimrc. 
+Let's start with checking out /etc/vimrc to see the system-wide configurations for vim. Note that this differs from the user specific ones in your home directory i.e. ~/.vimrc.
 
-&nbsp; a) Search for all lines starting with set 
+&nbsp; a) Search for all lines starting with set
 
-&nbsp; b) Search for all lines starting with set and starting with leading spaces and then set (note that vim ignores leading whitespaces). 
+&nbsp; b) Search for all lines starting with set and starting with leading spaces and then set (note that vim ignores leading whitespaces).
 
 <!-- grep -En '^(set| +set)' vimrc -->
 <!-- grep -Enc '^ *set' vimrc -->
@@ -19,13 +19,30 @@ Let's start with checking out /etc/vimrc to see the system-wide configurations f
 
 <!-- grep -En '^ *"' vimrc  -->
 
-## 1. Parse /etc/shadow 
+## 1. Parse /etc/shadow
 
-DESCRIPTION
+Password hashes are stored in /etc/shadow and you neet root access to be able to read this file.
 
-&nbsp; a)
+&nbsp; a) Start with creating a new user and a password for that user with
 
-&nbsp; b)
+```bash
+sudo useradd -m Bob
+sudo passwd Bob
+
+# create another one that has no password
+sudo useradd -m Camille
+```
+
+&nbsp; b) Now get only those fields with password. Also add headers also so example could be:
+
+```
+USER     HASH
+Bob      $y$j9T$7Liode2IMq5agwZn8LtflOfi$JctLEwKDmux6NtgcifAEJThXXZ.wQn6OgKkvdZ8WomB
+David    $y$j9T$kw901m0uAeUfxTdaeyDHU0$wdPLRsYT4zbSXUPUtdIJZl209rUpm4I0zKCDW8D8pb.
+bib      $y$j9T$pbfrLv19BApMmIwSawtCM1$j1ZCmHhLsmSkB0FXXMefQhk/f1v1OO1zfxJlEuJXmt1
+```
+
+<!--  sudo awk -F: 'BEGIN {print "USER,HASH"} $2~/^\$/ {print $1 "," $2}' shadow | column -t -s, -->
 
 &nbsp; c)
 
