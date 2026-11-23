@@ -4,7 +4,7 @@ In this exercise, you get to familiarize yourself with regular expressions and a
 
 Purpose of this exercise is both to learn the neccessary tools to search and process text files and also to learn about various files in Linux.
 
-## 0. /etc/vimrc 
+## 0. search /etc/vimrc with grep -E
 
 Let's start with checking out /etc/vimrc to see the system-wide configurations for vim. Note that this differs from the user specific ones in your home directory i.e. ~/.vimrc. 
 
@@ -13,16 +13,13 @@ Let's start with checking out /etc/vimrc to see the system-wide configurations f
 &nbsp; b) Search for all lines starting with set and starting with leading spaces and then set (note that vim ignores leading whitespaces). 
 
 <!-- grep -En '^(set| +set)' vimrc -->
+<!-- grep -Enc '^ *set' vimrc -->
 
 &nbsp; c) Starting with a quote " is a comment in vimrc. Search for all comments starting with a quote
 
-<!-- grep -En '^"' vimrc  -->
+<!-- grep -En '^ *"' vimrc  -->
 
-&nbsp; d) Also a quote after some commands (set, let, syntax, colorscheme) are treated as a trailing comment. Search for all comments after the set keyword.  
-
-&nbsp; e)
-
-## 1. practical exercise
+## 1. 
 
 DESCRIPTION
 

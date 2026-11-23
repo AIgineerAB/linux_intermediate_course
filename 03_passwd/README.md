@@ -71,6 +71,8 @@ kokchun:x:1000:1000:kokchun:/home/kokchun:/bin/bash
 - shell is /bin/bash
 
 
+## /etc/shadow 
+
 
 
 ## User management and passwd
