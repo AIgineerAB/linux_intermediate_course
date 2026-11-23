@@ -4,6 +4,13 @@
   <img src="https://github.com/kokchun/assets/blob/main/FOLDER_NAME/.png?raw=true" alt="DESCRIPTION" width="600">
 </a>
 
+## /etc 
+
+/etc is a directory for system-wide configuration files that applies to all users of the system. These config files control behavior of operating system, services and softwares. 
+
+In this lecture we'll go into `/etc/passwd` but there are many more config files inside of /etc
+
+
 ## /etc/passwd
 
 `/etc/passwd` is a system file containing information about user accounts and system services.
