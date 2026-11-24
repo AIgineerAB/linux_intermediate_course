@@ -37,21 +37,45 @@ Processes starts in foreground by default taking keyboard input, and blocks the 
 
 During time of execution you can't run anything until it's finished.
 
-Stop the foreground process with `ctrl+c`
+Terminate the foreground process with `ctrl+c`. You can stop a foreground process with `ctrl+z`, but it can be resumed with fg or bg. Example 
+
+```bash 
+# starts in the foreground
+# sends small test packets to google.com and reports back how long the round trip took
+ping google.com
+```
+
+Then do ctrl+z and you will see it stopped. Now the job is stopped and is neither actively in the foreground nor running in the background. You can move it to foreground using fg %1 and to background bg %1.
 
 ## Background process
 
-Adding an ampersand `&` after the command will send it to the background. Sending it to the background means you can do other things in the terminal. 
+Adding an ampersand `&` after the command will send it to the background. Sending it to the background means you can do other things in the terminal. Even if you start ping or other commands that continuously outputs to the shell, you can still input commands to the shell. 
 
 Example 
 ```bash
-sleep 5 
+# ampersand & starts the command in background giving you control over the terminal
+sleep 500 &
 
 # outputs, where [1] is the job number and 73541 is the PID
 [1] 73541
 ```
 
 Background processes are stopped with `kill PID`. If kill doesn't work use kill -9 to force kill it.
+
+## Jobs
+
+TODO: 
+
+This is one job and 4 processes
+```bash
+# pipeline 
+cat /etc/passwd | grep bash | sort | uniq -c &
+
+# check jobs -> 1 job 4 processes
+jobs -l
+```
+
+
 
 <!-- bg and fg 
 what happens when opening new terminal?
