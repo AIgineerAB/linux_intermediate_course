@@ -25,6 +25,8 @@ Let's start with checking out /etc/vimrc to see the system-wide configurations f
 
 <!-- cat protocols | grep -i internet -->
 
+For b-f use `/etc/services`
+
 &nbsp; b) Search for rows with ssh
 
 &nbsp; c) Search for rows starting with ssh
