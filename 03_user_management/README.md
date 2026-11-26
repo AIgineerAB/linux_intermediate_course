@@ -26,7 +26,6 @@ anna:x:1001:1001:Anna Svensson,,,:/home/anna:/bin/bash
 1. username
 2. password placeholder -
    1. x -> stored in /etc/shadow
-   2. blank -> no password
 3. UID - user id
    1. 0 for root
    2. 1-999 for system services
@@ -109,7 +108,7 @@ sudo passwd bob
 passwd
 
 # if not logged in as bob and change his password
-sudo -u bob passwd
+sudo passwd bob
 
 # view password settings
 sudo chage -l bob
@@ -127,7 +126,7 @@ sudo chage -E 2026-11-30
 sudo chage -E 2027-11-30
 ```
 
-## Sudoers file
+## Sudo
 
 The wheel group is a special group whose members are allowed to use `sudo` so that they can gain root privileges. The word comes from "big wheel" meaning important person with power. This group only exist in RHEL-based systems, while the corresponding group in Debian is sudo.
 
@@ -136,9 +135,11 @@ The wheel group is a special group whose members are allowed to use `sudo` so th
 sudo usermod -aG wheel bob
 ```
 
-You can check the sudoers file `/etc/sudoers` and group file `/etc/group` to control that the bob has wheel and has sudo access.
+You can check using the id command 
 
-<!--  TODO:  paste from sudoers and group -->
+```bash
+id bob
+```
 
 Now try to login with bob
 
