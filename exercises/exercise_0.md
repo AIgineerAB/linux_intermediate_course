@@ -32,6 +32,7 @@ For b-f use `/etc/services`
 &nbsp; c) Search for rows starting with ssh
 
 &nbsp; d) Find a service on the port 443
+<!-- grep -Ei ' 443/' services -->
 
 &nbsp; e) Find a service on the port 80
 
