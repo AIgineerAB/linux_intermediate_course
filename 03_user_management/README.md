@@ -1,7 +1,7 @@
 # User management
 
-<a href="" target="_blank">
-  <img src="https://github.com/kokchun/assets/blob/main/FOLDER_NAME/.png?raw=true" alt="DESCRIPTION" width="600">
+<a href="https://youtu.be/WYxfnSUaolY" target="_blank">
+  <img src="https://github.com/kokchun/assets/blob/main/linux/user_management.png?raw=true" alt="user management" width="600">
 </a>
 
 ## /etc
