@@ -1,4 +1,4 @@
-# passwd and shadow
+# User management
 
 <a href="" target="_blank">
   <img src="https://github.com/kokchun/assets/blob/main/FOLDER_NAME/.png?raw=true" alt="DESCRIPTION" width="600">
@@ -148,8 +148,13 @@ ssh bob@<ip-address>
 sudo cat /etc/shadow
 ```
 
-To remove sudo access and
+To remove sudo access, you revoke the group 
 
+```bash
+sudo gpasswd -d bob wheel
+```
+
+Note that this applies first during the next session, so if bob is logged in now he still has sudo. 
 
 ## Delete an account
 
