@@ -28,8 +28,10 @@ ps -ef
 ps -a 
 
 # aux - all processes, exteneded info in user firendly format and includes daemons
-ps -aux
+ps aux
 ```
+
+
 
 ## Foreground process
 
@@ -62,11 +64,16 @@ sleep 500 &
 
 Background processes are stopped with `kill PID`. If kill doesn't work use kill -9 to force kill it.
 
+## Check fg and bg processes
+
+When running `ps aux` if you see a + on STAT column then it is a foreground process and if there is no + then it is a background process. 
+
+
 ## Jobs
 
-TODO: 
+A job is a unit of work submitted to the operating system from program or script. 
 
-This is one job and 4 processes
+This is one job that is split up into 4 processes
 ```bash
 # pipeline 
 cat /etc/passwd | grep bash | sort | uniq -c &
